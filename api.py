@@ -2,9 +2,10 @@ import requests
 
 base_url = "https://randomuser.me/api/"
 
-def get_users(n: int) -> list:
+def get_users(n: int, gender: str) -> list:
     payload = {
-        "results": n
+        "results": n,
+        "gender": gender
     }
     response = requests.get(base_url, params=payload)
 
